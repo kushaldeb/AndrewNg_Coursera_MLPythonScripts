@@ -54,12 +54,12 @@ theta = np.zeros((2,1))
 J = CostFunc(X, y, theta, m)
 print("With theta[0,0]\nCost computed=", J)
 
-#Lets take the first set of theta to be -1,2
+#Lets take the  set of theta to be -1,2
 theta2 = np.array([[-1],[2]])
 
-#Cost value with theta = (0,0)
+#Cost value with theta = (-1,2)
 J = CostFunc(X, y, theta2, m)
-print("With theta[-1,2]\nCost computed=",J)
+print("With theta[-1,2]\nCost computed=", J)
 
 #Now we will do Gradient Descent
 #for theta=(0,0)
@@ -67,8 +67,8 @@ learning_rate = 0.01
 epoochs = 1500
 
 theta = GradientDescent(X, y, theta, m, learning_rate, epoochs)
-print("\nFinal values of theta is:\n", theta)
-J = CostFunc(X, y, theta2, m)
+print("\nFinal value of theta is:\n", theta)
+J = CostFunc(X, y, theta, m)
 print("Final Cost is:\n", J)
 
 #Here 3.5*10000 and 7*10000 are population sizes.
